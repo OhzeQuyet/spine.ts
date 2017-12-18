@@ -167,7 +167,8 @@ export class RenderWebGL {
           case "MirroredRepeat": wrap_t = gl.MIRRORED_REPEAT; break;
         }
         const image_key: string = page.name;
-        this.textures.set(image_key, glMakeTexture(gl, images.get(image_key), min_filter, mag_filter, wrap_s, wrap_t));
+        const image = images.get(image_key);
+        if (image) this.textures.set(image_key, glMakeTexture(gl, image, min_filter, mag_filter, wrap_s, wrap_t));
       });
     } else {
       const gl: WebGLRenderingContext = this.gl;
@@ -179,7 +180,8 @@ export class RenderWebGL {
             case "mesh":
             case "weightedmesh":
               const image_key: string = attachment_key;
-              this.textures.set(image_key, glMakeTexture(gl, images.get(image_key), gl.LINEAR, gl.LINEAR, gl.CLAMP_TO_EDGE, gl.CLAMP_TO_EDGE));
+              const image = images.get(image_key);
+              if (image) this.textures.set(image_key, glMakeTexture(gl, image, gl.LINEAR, gl.LINEAR, gl.CLAMP_TO_EDGE, gl.CLAMP_TO_EDGE));
               break;
           }
         });
@@ -951,7 +953,7 @@ export function glDropVertex(gl: WebGLRenderingContext, vertex: RenderVertex): v
   vertex.buffer = null;
 }
 
-export function glMakeTexture(gl: WebGLRenderingContext, image: HTMLImageElement | undefined, min_filter: GLenum, mag_filter: GLenum, wrap_s: GLenum, wrap_t: GLenum): RenderTexture {
+export function glMakeTexture(gl: WebGLRenderingContext, image: HTMLImageElement, min_filter: GLenum, mag_filter: GLenum, wrap_s: GLenum, wrap_t: GLenum): RenderTexture {
   const texture: RenderTexture = new RenderTexture();
   texture.texture = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, texture.texture);

@@ -1,28 +1,30 @@
 {
-  "name": "spine.ts",
+  "name": "spine-ts",
   "version": "1.0.0",
   "description": "spine.ts",
   "main": "index.js",
   "dependencies": {
-    "@types/systemjs": "^0.19.33",
-    "plugin-typescript": "^5.3.3",
-    "systemjs": "^0.20.14",
     "typescript": "^2.3.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "plugin-typescript": "^5.3.3",
+    "systemjs": "^0.20.14",
+    "@types/systemjs": "^0.19.33",
+    "http-server": "^0.10.0"
+  },
   "scripts": {
     "build": "tsc",
     "build-demo": "tsc -p demo",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "http-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flyover/spine.ts.git"
+    "url": "git+https://github.com/OhzeQuyet/spine.ts.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flyover/spine.ts/issues"
+    "url": "https://github.com/OhzeQuyet/spine.ts/issues"
   },
-  "homepage": "https://github.com/flyover/spine.ts#readme"
+  "homepage": "https://github.com/OhzeQuyet/spine.ts#readme"
 }
