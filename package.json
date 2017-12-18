@@ -2,7 +2,7 @@
   "name": "spine-ts",
   "version": "1.0.0",
   "description": "spine.ts",
-  "main": "spine.js",
+  "main": "index.js",
   "dependencies": {
     "typescript": "^2.3.4"
   },
