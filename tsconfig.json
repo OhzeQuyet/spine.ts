@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "system",
-    "lib": [ "es6" ],
+    "lib": [ "es6", "dom" ],
     "inlineSourceMap": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -13,6 +13,10 @@
     "noUnusedParameters": false
   },
   "files": [
-    "spine.ts"
+    "spine.ts",
+    "atlas.ts",
+    "render-ctx2d.ts",
+    "render-webgl.ts",
+    "index.ts"
   ]
 }

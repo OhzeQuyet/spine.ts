@@ -1,4 +1,4 @@
-import * as Spine from "../spine";
+import * as Spine from "./spine";
 import * as Atlas from "./atlas";
 import { mat3x3Identity, mat3x3Scale, mat3x3Transform, mat3x3ApplyAtlasPageTexcoord, mat3x3ApplyAtlasSiteTexcoord } from "./render-webgl";
 

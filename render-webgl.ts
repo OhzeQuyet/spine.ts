@@ -1,4 +1,4 @@
-import * as Spine from "../spine";
+import * as Spine from "./spine";
 import * as Atlas from "./atlas";
 
 export class RenderWebGL {

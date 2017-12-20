@@ -1,6 +1,5 @@
-import {Spine} from "../index";
-import {Atlas} from "../index";
-// import * as Atlas from "./atlas";
+import {Spine, Atlas} from "../index";
+// import * as Atlas onFocusChangeonFocusChangeonFocusChangefrom "./atlas";
 import { RenderCtx2D } from "./render-ctx2d";
 import { RenderWebGL } from "./render-webgl";
 import { mat4x4Identity, mat4x4Ortho, mat4x4Translate, mat4x4Scale } from "./render-webgl";

@@ -12,9 +12,6 @@
         "noUnusedParameters": false
     },
     "files": [
-        "main.ts",
-        "atlas.ts",
-        "render-ctx2d.ts",
-        "render-webgl.ts"
+        "main.ts"
     ]
 }
